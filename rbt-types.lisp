@@ -5,7 +5,9 @@
 
 (defstruct (bnt-node (:conc-name nil)
 
-                     (:print-function (lambda (nd s dep) (format s "Node <~A>" (node-item nd)))))
+                     (:print-function (lambda (nd s dep)
+					(declare (ignore dep))
+					(format s "Node <~A>" (node-item nd)))))
 
   (node-item nil)
 
