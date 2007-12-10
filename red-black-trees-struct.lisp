@@ -351,9 +351,7 @@
 
   (loop with p = root
 
-     named find-loop
-
-     finally (return-from find-loop nil)
+     finally (return)
 
      while (not (rbt-null p))
 
@@ -361,7 +359,7 @@
 
      (cond ((funcall test-equal it (funcall key (node-item p)))
                
-	    (return-from find-loop p))
+	    (return))
 
 	   ((funcall test it (funcall key (node-item p))) (setf p (left p)))
 
