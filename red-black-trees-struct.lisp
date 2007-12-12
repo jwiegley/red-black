@@ -359,7 +359,7 @@
 
      (cond ((funcall test-equal it (funcall key (node-item p)))
                
-	    (return))
+	    (return p))
 
 	   ((funcall test it (funcall key (node-item p))) (setf p (left p)))
 
